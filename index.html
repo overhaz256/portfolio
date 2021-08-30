@@ -5,43 +5,572 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&family=Poppins:wght@200;300;400;600;800&family=Roboto&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <!-- Argon CSS -->
-    <link type="text/css" href="css/argon-design-system.min.css" rel="stylesheet"> 
+    <link type="text/css" href="css/argon-design-system.min.css" rel="stylesheet">
+
     <!-- Estilos Propios -->
-    <link rel="stylesheet" href="css/style.css">
-      
+    <link rel="stylesheet" href="/css/style.css">
+    
     <title>Wilberd Espino</title>
   </head>
   <body>
     <!---------------------------------------- HEADER  ------------------------------------------------------------------>
-    <header class="header">
+    <header class="header" id="header">
+        <nav class="nav container navbar-expand-lg">
+            <a href="#" class="nav__logo navbar-brand ml-3">WEspino</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <em class="uil uil-rocket nav__icon"></em> Inicio
+                        </a>                       
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <em class="uil uil-user-circle nav__icon"></em> Conóceme
+                        </a>                       
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <em class="uil uil-cloud-bookmark nav__icon"></em> Skillset
+                        </a>                       
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#qualifications" class="nav__link">
+                            <em class="uil uil-notes nav__icon"></em> Educación
+                        </a>                       
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">
+                            <em class="uil uil-arrow"></em> Portafolio
+                        </a>                       
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <em class="uil uil-at"></em> Contacto
+                        </a>                       
+                    </li>
+                </ul>
+                <em class="uil uil-times-circle nav__close" id="nav-close"></em>
+            </div>
+
+            <div class="nav__btns">
+                <em data-mode="dark" class="uil uil-moon moon-change-theme" id="theme-button"></em>
+                <div class="nav__toggle" id="nav-toggle">
+                    <em class="uil uil-apps"></em>
+                </div>
+            </div>
+        </nav>
     </header>
-    
+
 <!-- ===================================== MAIN ============================================================ -->
     <main class="main">
 
     <!---------------------------------------- HOME  ------------------------------------------------------------------>
         <section class="home section" id="home">
-
+            <div class="about__container container grid">
+                <div class="home__data">
+                    <small class="home__welcome s-color">Bienvenido a mi Portafolio Web</small>
+                    <h1 class="home__title"> Hola, soy </h1>
+                    <div id="typewriter"></div>
+                    <h3 class="home__subtitle" id="home-bio">Estudiante de la carrera de Ingeniería de Computación y Sistemas.
+                        Apasionado a la tecnología, investigador e innovador.
+                    </h3>
+                    <a href="#contact" class="button button--flex">
+                        Contáctame <em class="uil uil-fast-mail button__icon"></em>
+                    </a>
+                </div>
+            </div>
+            <div class="home__scroll">
+                <a href="#about" class="home_scroll-button button--flex">
+                    <em class="uil uil-arrow-circle-down home__scroll-down"></em>
+                    <em class="uil uil-arrow home__scroll-down"></em>
+                    <em class="uil uil-laptop home__scroll-down"></em>
+                    <em class="uil uil-brackets-curly home__scroll-down"></em>
+                    <em class="uil uil-processor home__scroll-down"></em>
+                    <em class="uil uil-arrow home__scroll-down"></em>
+                    <em class="uil uil-laptop home__scroll-down"></em>
+                    <em class="uil uil-brackets-curly home__scroll-down"></em>
+                    <em class="uil uil-arrow-circle-down home__scroll-down"></em>
+                </a>
+            </div>
         </section>
 
 
     <!---------------------------------------- ABOUT ME  ------------------------------------------------------------------>
         <section class="about section" id="about">
+            <h2 class="section__title">Acerca de</h2>
+            <span class="section__subtitle">Un pequeño resumen acerca de mi perfil profesional</span>
 
+            <div class="about__container container grid">
+                <img src="assets/img/prog2.png" alt="Developer best friends." class="about__image">
+
+                <div class="about__data">
+                    <p class="about__description" id="home-about">
+                        Estudiante del Décimo Ciclo de la carrera de Ingeniería de Computación y Sistemas con orientación 
+                        al desarrollo de software (Front & Back End) y desarrollo web. Investigador de nuevas tecnologías, 
+                        proactivo y dispuesto a formar parte de un equipo de trabajo con el fin de alcanzar las metas trazadas 
+                        por la empresa donde desempeñe mis labores. Cuento con proyectos desarrollados empíricamente 
+                        en los cuales evidencio y pongo en práctica mis conocimientos.
+                    </p>
+                </div>
+
+                <div class="about__info">
+                    <div>
+                        <span class="about__info-title"> +2 </span>
+                        <span class="about__info-name"> Tecnologías <br> Nuevas</span>
+                    </div>
+
+                    <div>
+                        <span class="about__info-title"> 5+ </span>
+                        <span class="about__info-name"> Proyectos <br> Realizados</span>
+                    </div>
+
+                    <div>
+                        <span class="about__info-title"> +2 </span>
+                        <span class="about__info-name"> Compañias <br> Trabajo</span>
+                    </div>
+                </div>
+
+                <div class="about__buttons">
+                    <a href="assets/file/CV-WE.pdf" download="CV Wilberd Espino" target="_blank" class="button button--flex">
+                        Descargar CV <em class="uil uil-import button__icon"></em>
+                    </a>
+                </div>
+            </div>
         </section>
-
-
 
     <!---------------------------------------- SKILLS  ------------------------------------------------------------------>
-        <section class="skills section" id="skills">
+        <section class="skills section" id="skills" style="padding: 3px;">
+            <h2 class="section__title">Skillset </h2>
+            <h2 class="section__subtitle">Entre las principales tecnologías que domino se encuentran</h2>
+            <div class="skills__container container grid">
+                <div class="row" id="skillset_container">
+                    <!-- SKILL 1 JAVA -->
+                    <div class="skills__container-card">
+                        <div class="card_skill shadow2">
+                            <div class="imgBx">
+                                <img src="assets/img/java-seeklogo.com.svg" alt="HTML Logo">
+                            </div>
+                            <div class="contentBx">
+                                <h2 style="font-size: 24px; text-align:center;">
+                                    Intermedio
+                                </h2>
+                            </div>
+                        </div>
+                        <h2 style="font-size: 24px; text-align:center;">
+                            Java
+                        </h2>
+                    </div>
 
+                    <!-- SKILL 2 GIT -->
+                    <div class="skills__container-card">
+                        <div class="card_skill shadow2">
+                            <div class="imgBx">
+                                <img src="assets/img/git-seeklogo.com_eqv1dl.svg" alt="HTML Logo">
+                            </div>
+                            <div class="contentBx">
+                                <h2 style="font-size: 24px; text-align:center;">
+                                    Avanzado
+                                </h2>
+                            </div>
+                        </div>
+                        <h2 style="font-size: 24px; text-align:center;">
+                            Git & GitHub
+                        </h2>
+                    </div>
+
+                    <!-- SKILL 3 PHP -->
+                    <!-- <div class="skills__container-card">
+                        <div class="card_skill shadow2">
+                            <div class="imgBx">
+                                <img src="assets/img/html5-with-wordmark-color.svg" alt="HTML Logo">
+                            </div>
+                            <div class="contentBx">
+                                <h2 style="font-size: 24px; text-align:center;">
+                                    Intermedio
+                                </h2>
+                            </div>
+                        </div>
+                        <h2 style="font-size: 24px; text-align:center;">
+                            PHP
+                        </h2>
+                    </div> -->
+
+                    <!-- SKILL 4 ANGULAR -->
+                    <div class="skills__container-card">
+                        <div class="card_skill shadow2">
+                            <div class="imgBx">
+                                <img src="assets/img/angular-seeklogo.com.svg" alt="HTML Logo">
+                            </div>
+                            <div class="contentBx">
+                                <h2 style="font-size: 24px; text-align:center;">
+                                    Intermedio
+                                </h2>
+                            </div>
+                        </div>
+                        <h2 style="font-size: 24px; text-align:center;">
+                            Angular 
+                        </h2>
+                    </div>
+
+                    <!-- SKILL 5 REACT -->
+                    <div class="skills__container-card">
+                        <div class="card_skill shadow2">
+                            <div class="imgBx">
+                                <img src="assets/img/react-seeklogo.com.svg" alt="HTML Logo">
+                            </div>
+                            <div class="contentBx">
+                                <h2 style="font-size: 24px; text-align:center;">
+                                    Intermedio
+                                </h2>
+                            </div>
+                        </div>
+                        <h2 style="font-size: 24px; text-align:center;">
+                            React JS
+                        </h2>
+                    </div>
+
+                    <!-- SKILL 6 SPRING -->
+                    <div class="skills__container-card">
+                        <div class="card_skill shadow2">
+                            <div class="imgBx">
+                                <img src="assets/img/spring-seeklogo.com.svg" alt="HTML Logo">
+                            </div>
+                            <div class="contentBx">
+                                <h2 style="font-size: 24px; text-align:center;">
+                                    Intermedio
+                                </h2>
+                            </div>
+                        </div>
+                        <h2 style="font-size: 24px; text-align:center;">
+                            Spring Framework
+                        </h2>
+                    </div>
+
+                    <!-- SKILL 7 PYTHON -->
+                    <div class="skills__container-card">
+                        <div class="card_skill shadow2">
+                            <div class="imgBx">
+                                <img src="assets/img/python-seeklogo.com_sbuevg.svg" alt="HTML Logo">
+                            </div>
+                            <div class="contentBx">
+                                <h2 style="font-size: 24px; text-align:center;">
+                                    Básico
+                                </h2>
+                            </div>
+                        </div>
+                        <h2 style="font-size: 24px; text-align:center;">
+                            Python
+                        </h2>
+                    </div>
+
+                    <!-- SKILL 8 VSCODE -->
+                    <div class="skills__container-card">
+                        <div class="card_skill shadow2">
+                            <div class="imgBx">
+                                <img src="assets/img/visual-studio-code-seeklogo.com_ps85dh.svg" alt="HTML Logo">
+                            </div>
+                            <div class="contentBx">
+                            </div>
+                        </div>
+                        <h2 style="font-size: 24px; text-align:center;">
+                            Visual Studio Code
+                        </h2>
+                    </div>
+
+                    <!-- SKILL 9 SQL SERVER -->
+                    <div class="skills__container-card">
+                        <div class="card_skill shadow2">
+                            <div class="imgBx">
+                                <img src="assets/img/microsoft-sql-server-seeklogo.com.svg" alt="HTML Logo">
+                            </div>
+                            <div class="contentBx">
+                                <h2 style="font-size: 24px; text-align:center;">
+                                    Avanzado
+                                </h2>
+                            </div>
+                        </div>
+                        <h2 style="font-size: 24px; text-align:center;">
+                            SQL Server 2016
+                        </h2>
+                    </div>
+
+                    <!-- SKILL 10 NODE JS-->
+                    <div class="skills__container-card">
+                        <div class="card_skill shadow2">
+                            <div class="imgBx">
+                                <img src="assets/img/nodejs-seeklogo.com.svg" alt="HTML Logo">
+                            </div>
+                            <div class="contentBx">
+                                <h2 style="font-size: 24px; text-align:center;">
+                                    Avanzado
+                                </h2>
+                            </div>
+                        </div>
+                        <h2 style="font-size: 24px; text-align:center;">
+                            Node JS
+                        </h2>
+                    </div>
+
+                </div>
+            </div>
         </section>
 
 
+    <!---------------------------------------- QUALIFITCATIONS (EDUCACION Y EXPERIENCIA)  ------------------------------------------------------------------>
+        <section class="qualification section" id="qualification">
+            <h2 class="section__title"> Qualification </h2>
+            <span class="section__subtitle"> My persoanl Journey </span>
+
+            <div class="qualification__container container">
+
+                <div class="row mt-lg-0">
+                    <!-- EDUCACIÓN -->
+                    <div class="col-lg-6 col-sm-10 col-md-10 mt-2 qualification__content" id="education">
+                        <div class="qualification__button button--flex">
+                            <i class="uil uil-graduation-cap qualification__icon"></i> Educación
+                        </div>
+
+                        <div id="education_timeline">
+                            <div class="container py-2">
+
+                                <!-- ITEM 1 -->
+                                <div class="row">
+                                    <!-- DISEÑO -->
+                                    <div class="col-auto text-center flex-column d-sm-flex">
+                                        <div class="row h-50 qualification__journey">
+                                            <div class="col">
+                                                <span class="qualification__line"></span>
+                                            </div>
+                                            <div class="col">&nbsp;</div>
+                                        </div>
+
+                                        <h5>
+                                            <span class="badge qualification__calendar">
+                                                <i class="uil uil-calendar-alt qualification__calendar-icon"></i>
+                                                2021
+                                            </span>
+                                        </h5>
+
+                                        <div class="row h-50 qualification__journey">
+                                            <div class="col">
+                                                <span class="qualification__line"></span>
+                                            </div>
+                                            <div class="col">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                    <!-- Timeline content Events -->
+                                    <div class="col py-2">
+                                        <div class="card education-card mirror-face shadow2">
+                                            <div class="card-body">
+                                                <div class="task">
+                                                    <div class="abstract">
+                                                        <h3 class="qualification__title"> Business Intelligence - Implementación </h3>
+                                                        <p class="qualification__subtitle">  Curso </p>
+                                                    </div>
+                                                    <div class="details">
+                                                        <p class="qualification__subtitle"> Universidad Nacional de Ingeniería</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ITEM 2 -->
+                                <div class="row">
+                                    <!-- DISEÑO -->
+                                    <div class="col-auto text-center flex-column d-sm-flex">
+                                        <div class="row h-50 qualification__journey">
+                                            <div class="col">
+                                                <span class="qualification__line"></span>
+                                            </div>
+                                            <div class="col">&nbsp;</div>
+                                        </div>
+
+                                        <h5>
+                                            <span class="badge qualification__calendar">
+                                                <i class="uil uil-calendar-alt qualification__calendar-icon"></i>
+                                                2019
+                                            </span>
+                                        </h5>
+
+                                        <div class="row h-50 qualification__journey">
+                                            <div class="col">
+                                                <span class="qualification__line"></span>
+                                            </div>
+                                            <div class="col">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                    <!-- CONTENIDO -->
+                                    <div class="col py-2">
+                                        <div class="card education-card transparent_card mirror-face shadow2">
+                                            <div class="card-body">
+                                                <div class="task">
+                                                    <div class="abstract">
+                                                        <h3 class="qualification__title"> Diseño de Base de Datos </h3>
+                                                        <p class="qualification__subtitle"> Curso </p>
+                                                    </div>
+                                                    <div class="details">
+                                                        <p class="qualification__subtitle"> Universidad Nacional de Ingeniería</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                 <!-- ITEM 3 -->
+                                 <div class="row">
+                                    <!-- Timeline design -->
+                                    <div class="col-auto text-center flex-column d-sm-flex">
+                                        <div class="row h-50 qualification__journey">
+                                            <div class="col">
+                                                <span class="qualification__line"></span>
+                                            </div>
+                                            <div class="col">&nbsp;</div>
+                                        </div>
+
+                                        <h5>
+                                            <span class="badge qualification__calendar">
+                                                <i class="uil uil-calendar-alt qualification__calendar-icon"></i>
+                                                2016
+                                            </span>
+                                        </h5>
+
+                                        <div class="row h-50 qualification__journey">
+                                            <div class="col">
+                                                <span class="qualification__line"></span>
+                                            </div>
+                                            <div class="col">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                    <!-- Timeline content Events -->
+                                    <div class="col py-2">
+                                        <div class="card education-card transparent_card mirror-face shadow2">
+                                            <div class="card-body">
+                                                <div class="task">
+                                                    <div class="abstract">
+                                                        <h3 class="qualification__title"> Ingeniería de Computación y Sistemas </h3>
+                                                        <p class="qualification__subtitle">Educación Universitaria</p>
+                                                    </div>
+                                                    <div class="details">
+                                                        <p class="qualification__subtitle"> Universidad de San Martín de Porres </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                 <!-- Timeline item end -->
+                                 <div class="row">
+                                    <!-- Timeline design -->
+                                    <div class="col-auto text-center flex-column d-sm-flex">
+                                        <div class="row h-50 qualification__journey">
+                                            <div class="col">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                    <!-- Timeline content Events -->
+                                    <div class="col py-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EXPERIENCIA -->
+                    <div class="col-lg-6 col-sm-10 col-md-10 mt-2 qualification__content" id="experience">
+                        <div class="qualification__button button--flex">
+                            <i class="uil uil-briefcase-alt qualification__icon"></i> Experiencia
+                        </div>
+
+                        <div id="expreience_timeline">
+                            <div class="container py-2">
+                                <!-- ITEM 1 -->
+                                <div class="row">
+                                    <!-- Timeline design -->
+                                    <div class="col-auto text-center flex-column d-sm-flex">
+                                        <div class="row h-50 qualification__journey">
+                                            <div class="col">
+                                                <span class="qualification__line"></span>
+                                            </div>
+                                            <div class="col">&nbsp;</div>
+                                        </div>
+
+                                        <h5>
+                                            <span class="badge qualification__calendar">
+                                                <i class="uil uil-calendar-alt qualification__calendar-icon"></i>
+                                                AGO. 2021
+                                            </span>
+                                        </h5>
+
+                                        <div class="row h-50 qualification__journey">
+                                            <div class="col">
+                                                <span class="qualification__line"></span>
+                                            </div>
+                                            <div class="col">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                    <!-- CONTENIDO -->
+                                    <div class="col py-2">
+                                        <div class="card education-card transparent_card mirror-face shadow2">
+                                            <div class="card-body">
+                                                <div class="task">
+                                                    <div class="abstract">
+                                                        <h3 class="qualification__title"> Desarrollador </h3>
+                                                        <p class="qualification__subtitle"> Empresa: T - Integro </p>
+                                                    </div>
+                                                    <div class="details">
+                                                        <p class="qualification__subtitle"> 
+                                                            Análisis e implementación del sistema de gestión hospitalaria T - Integro.<br>
+                                                            Integración de APIS con Microservicios.<br>
+                                                            Tecnologías: SpringBoot, Angular, Swagger, PostgreSQL.<br>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Timeline item end -->
+                                <div class="row">
+                                    <!-- Timeline design -->
+                                    <div class="col-auto text-center flex-column d-sm-flex">
+                                        <div class="row h-50 qualification__journey">
+                                            <div class="col">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                    <!-- Timeline content Events -->
+                                    <div class="col py-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     <!---------------------------------------- PORTFOLIO  ------------------------------------------------------------------>
         <section class="portfolio section" id="portfolio">
@@ -53,7 +582,22 @@
 
     <!---------------------------------------- CONTACT  ------------------------------------------------------------------>
         <section class="contact section" id="contact">
-
+            <div class="home__content grid">
+                <div class="home__social">
+                    <a href="" target="_blank" class="home__social-icon" id="myLinkedIn">
+                        <em class="uil uil-linkedin"></em>
+                    </a>
+                    <a href="" target="_blank" class="home__social-icon" id="myGitHub">
+                        <em class="uil uil-github"></em>                         
+                    </a>
+                    <a href="" target="_blank" class="home__social-icon" id="myInstagram">
+                        <em class="uil uil-instagram-alt"></em>
+                    </a>
+                    <a href="" target="_blank" class="home__social-icon" id="myBlog">
+                        <em class="uil uil-document-layout-left"></em>
+                    </a>
+                </div>
+            </div>
         </section>
 
 
@@ -62,9 +606,8 @@
     <footer class="footer">
 
     </footer>
-    <!-- Option 1: Bootstrap Bundle with Popper
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
 
+    
     <!-- Core -->
     <script src="js/core/jquery.min.js"></script>
     <script src="js/core/jquery.min.js"></script>
@@ -72,6 +615,9 @@
 
     <!-- Argon JS -->
     <script src="js/argon-design-system.js"></script>
+
+    <!-- TypeWritter CSS Effect  -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
     <!--SELF SCRIPT-->
     <script src="js/script.js"></script> 
