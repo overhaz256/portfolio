@@ -1,68 +1,9 @@
-//=========================================== TEMA OSCURO ==========================================//
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'uil-brightness'
+// //=========================================== TEMA OSCURO ==========================================//
+    const chk = document.getElementById('chk');
 
-//======================================== TOPICO SELECCIONADO PREVIAMENTE =================================//
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
-
-//============================== OBTENER EL TEMA ACTUAL PARA QUE LA INTERFAZ VALIDE EL TEMA OSCURO =================================//
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => document.body.classList.contains(iconTheme) ? 'uil-moon' : 'uil-brightness'
-
-//============================== VALIDAR SI EL USUARIO ELIGIO UN TOPICO PREVIAMENTE =================================================//
-if(selectedTheme){
-    document.body.classList[selectedTheme == 'dark' ? 'add' : 'remove'](darkTheme)
-    themeButton.classList[selectedIcon == 'uil-moon' ? 'add' : 'remove'](iconTheme)
-}
-
-//============================== ACTIVAR O DESACTIVAR EL TEMA MANUALMENTE =================================================//
-themeButton.addEventListener('click', () => {
-    //=============== AGREGAR O REMOVER EL SOL/LUNA icon -- icon theme =================//
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    //=============== GUARDAR EL TEMA Y EL ICONO ACTUAL QUE EL USUARIO ELIGIO ==========//
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})
-
-console.log("TEMA CORRIENDO")
-
-//============================== MENU MOSTRAR Y OCULTAR =============================//
-const navMenu = document.getElementById('nav-menu')
-const navToggle = document.getElementById('nav-toggle')
-const navClose = document.getElementById('nav-close')
-
-//=========== MOSTRAR MENU ==================//
-/* VALIDAR SI LA CONSTANTE EXISTE */
-if(navToggle){
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu')
-    })
-}
-
-//=========== OCULTAR MENU ==================//
-/* VALIDAR SI LA CONSTANTE EXISTE */
-if(navClose){
-    navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu')
-    })
-}
-
-console.log("MENU Y AJUSTES CORRIENDO")
-
-//============================ REMOVER MENU =============================//
-const navLink = document.querySelectorAll('.nav__link')
-
-function linkAction() {
-    const navMenu = document.getElementById('nav-menu')
-    // CUANDO DEMOS CLICK EN nav__links REMOVEMOS EL MOSTRAR MENU
-    navMenu.classList.remove('show-menu')
-}
-
-navLink.forEach(n => n.addEventListener('click', linkAction))
-console.log("REMOVER MENU CORRIENDO")
+    chk.addEventListener('change', () => {
+    document.body.classList.toggle('dark-theme');
+});
 
 //============================= TypeWriter Effect ===================//
 new Typewriter('#typewriter', {
@@ -73,3 +14,142 @@ new Typewriter('#typewriter', {
 });
 
 console.log("TYPEWRITER EFFECT CORRIENDO")
+
+//============================= Portafolio Swiper ===================//
+
+var swiper = new Swiper(".blog-slider", {
+    spaceBetween: 30,
+    effect: 'fade',
+    loop: true,
+    mousewheel:{
+        invert: false
+    },
+
+    pagination: {
+      el: ".blog-slider__pagination",
+      clickable: true,
+    },
+    // mousewheel: true,
+    keyboard: true,
+  });
+console.log("PORTAFOLIO SWPIER EFFECT CORRIENDO")
+
+//============================= Scroll Up ===================//
+
+function scrollUp(){
+    const scrollup = document.getElementById('scroll-up');
+    if(this.scrollY >= 560) {
+        scrollup.classList.add('show-scroll');
+    }
+    else {
+        scrollup.classList.remove('show-scroll');
+    }
+    console.log("Scrollup working");
+}
+
+window.addEventListener('scroll', scrollUp)
+
+//============================= Scroll Section Active Highlight ===================//
+
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive() {
+    const scrollY = window.pageYOffset
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY < sectionTop + sectionHeight) {
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active')
+        } else {
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active') 
+        }
+    })
+    console.log("Section highlight working");
+}
+
+window.addEventListener('scroll', scrollActive)
+
+
+//============================= HIDE SHOW MENU ===================//
+
+let ubicacionPrincipal  = window.pageYOffset;
+window.onscroll = function() {
+    let Desplazamiento_Actual = window.pageYOffset;
+    if(ubicacionPrincipal >= Desplazamiento_Actual){
+        document.getElementById('navbar').style.top = '0';
+    }
+    else{
+        document.getElementById('navbar').style.top = '-100px';
+    }
+    ubicacionPrincipal = Desplazamiento_Actual;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function showModal(titleHtml, contentHtml, buttons) {
+    const modal = document.createElement("div");
+  
+    modal.classList.add("modal");
+    modal.innerHTML = `
+          <div class="modal__inner">
+              <div class="modal__top">
+                  <div class="modal__title"><strong>${titleHtml}</strong></div>
+                  
+              </div>
+              <br>
+              <div class="modal__content">${contentHtml}</div>
+              <div class="modal__bottom"></div>
+          </div>
+      `;
+  
+    for (const button of buttons) {
+      const element = document.createElement("button");
+  
+      element.setAttribute("type", "button");
+      element.classList.add("modal__button");
+      element.textContent = button.label;
+      element.addEventListener("click", () => {
+        if (button.triggerClose) {
+          document.body.removeChild(modal);
+        }
+  
+        button.onClick(modal);
+      });
+  
+      modal.querySelector(".modal__bottom").appendChild(element);
+    }
+
+    modal.addEventListener("click", ()=> {
+        document.body.removeChild(modal);
+    })
+
+    modal.querySelector(".modal__button").addEventListener("click", () => {
+        document.body.removeChild(modal);
+      });
+  
+    document.body.appendChild(modal);
+  }
+  
+  showModal("Bienvenido a mi portafolio web!", "<p>Actualmente la página no está adaptada para visualizarla en móvil pero no te preocupes, estoy trabajando en ello!. PD: Tienes para elegir entre el tema de tu preferencia: Tema Claro o Tema Oscuro :D.<br><center>¡Espero disfrutes tu estadia!.</center></p>", [
+    {
+      label: "¡De acuerdo!",
+      onClick: (modal) => {
+
+      },
+      triggerClose: false
+    }
+  ]);
+  

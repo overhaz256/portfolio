@@ -19,67 +19,70 @@
     <!-- Argon CSS -->
     <link type="text/css" href="css/argon-design-system.min.css" rel="stylesheet">
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <!-- Estilos Propios -->
     <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/LOGO.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     
-    <title>Wilberd Espino</title>
+    <!-- Modal -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title> Wilberd Espino | Portafolio</title>
   </head>
   <body>
     <!---------------------------------------- HEADER  ------------------------------------------------------------------>
     <header class="header" id="header">
-        <nav class="nav container navbar-expand-lg">
-            <a href="#" class="nav__logo navbar-brand ml-3">WEspino</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list grid">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link">
-                            <em class="uil uil-rocket nav__icon"></em> Inicio
-                        </a>                       
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <em class="uil uil-user-circle nav__icon"></em> Conóceme
-                        </a>                       
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <em class="uil uil-cloud-bookmark nav__icon"></em> Skillset
-                        </a>                       
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#qualifications" class="nav__link">
-                            <em class="uil uil-notes nav__icon"></em> Educación
-                        </a>                       
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">
-                            <em class="uil uil-arrow"></em> Portafolio
-                        </a>                       
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">
-                            <em class="uil uil-at"></em> Contacto
-                        </a>                       
-                    </li>
-                </ul>
-                <em class="uil uil-times-circle nav__close" id="nav-close"></em>
-            </div>
-
-            <div class="nav__btns">
-                <em data-mode="dark" class="uil uil-moon moon-change-theme" id="theme-button"></em>
-                <div class="nav__toggle" id="nav-toggle">
-                    <em class="uil uil-apps"></em>
+        <nav class="navbar-expand-lg ml-auto" id="navbar">
+                <div style="display:flex;padding-left: 30px;">
+                <a href="#" class="nav-img ml-3">
+                    <img src="/assets/img/LOGO.png" alt="" href="#"><a href="#" class="navbar-brand">WEspinoG</a>
+                </a> 
+            </div>               
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nvbCollapse" aria-controls="nvbCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="nav-menu collapse navbar-collapse" id="nvbCollapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item pl-1">
+                            <a class="nav-link" href="#"><i class="fa fa-home fa-fw mr-1"></i>Inicio</a>
+                        </li>
+                        <li class="nav-item pl-1">
+                            <a class="nav-link" href="#about"><i class="fa fa-user fa-fw mr-1"></i>Conóceme</a>
+                        </li>
+                        <li class="nav-item pl-1">
+                            <a class="nav-link" href="#skills"><i class="fa fa-database fa-fw mr-1"></i>Skill Set</a>
+                        </li>
+                        <li class="nav-item pl-1">
+                            <a class="nav-link" href="#qualification"><i class="fa fa-graduation-cap fa-fw mr-1"></i>Educación</a>
+                        </li>
+                        <li class="nav-item pl-1">
+                            <a class="nav-link" href="#portfolio"><i class="fa fa-code fa-fw mr-1"></i>Portafolio</a>
+                        </li>
+                        <li class="nav-item pl-1">
+                            <a class="nav-link" href="#contact"><i class="fa fa-paper-plane fa-fw mr-1"></i>Contacto</a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
+                <div class="nav__btns"> 
+                    <div>
+                        <input type="checkbox" class="checkbox" id="chk" />
+                        <label class="label" for="chk">
+                        <em data-mode="dark" class="fas fa-sun moon-change-theme nav__item" id="theme-button"></em>
+                        <em data-mode="dark" class="fas fa-moon moon-change-theme nav__item" id="theme-button"></em>
+                        <div class="ball"></div>
+                        </label>
+                    </div>
+                    <div class="nav__toggle" id="nav-toggle">
+                        <em class="uil uil-apps"></em>
+                    </div>
+                </div> 
         </nav>
     </header>
 
@@ -116,7 +119,6 @@
             </div>
         </section>
 
-
     <!---------------------------------------- ABOUT ME  ------------------------------------------------------------------>
         <section class="about section" id="about">
             <h2 class="section__title">Acerca de</h2>
@@ -126,34 +128,33 @@
                 <img src="assets/img/prog2.png" alt="Developer best friends." class="about__image">
 
                 <div class="about__data">
-                    <p class="about__description" id="home-about">
+                    <p class="about__description" id="home-about" style="text-align: justify;">
                         Estudiante del Décimo Ciclo de la carrera de Ingeniería de Computación y Sistemas con orientación 
                         al desarrollo de software (Front & Back End) y desarrollo web. Investigador de nuevas tecnologías, 
-                        proactivo y dispuesto a formar parte de un equipo de trabajo con el fin de alcanzar las metas trazadas 
-                        por la empresa donde desempeñe mis labores. Cuento con proyectos desarrollados empíricamente 
-                        en los cuales evidencio y pongo en práctica mis conocimientos.
+                        proactivo, cuento con experiencia en el desarrollo e integración de APIS REST con Microservicios y 
+                        Desarrollo Web. Adicionalmente desarrollé proyectos empíricamente en los cuales evidencio y pongo en práctica mis conocimientos.
                     </p>
                 </div>
 
                 <div class="about__info">
                     <div>
-                        <span class="about__info-title"> +2 </span>
-                        <span class="about__info-name"> Tecnologías <br> Nuevas</span>
+                        <span class="about__info-title"> Idioma Inglés</span>
+                        <span class="about__info-name"> Nivel Avanzado</span>
                     </div>
 
                     <div>
-                        <span class="about__info-title"> 5+ </span>
-                        <span class="about__info-name"> Proyectos <br> Realizados</span>
+                        <span class="about__info-title"> Certificación </span>
+                        <span class="about__info-name"> SFPC&trade;</span>
                     </div>
 
                     <div>
-                        <span class="about__info-title"> +2 </span>
-                        <span class="about__info-name"> Compañias <br> Trabajo</span>
+                        <span class="about__info-title"> Laborando en </span>
+                        <span class="about__info-name"> Seidor Perú</span>
                     </div>
                 </div>
 
                 <div class="about__buttons">
-                    <a href="assets/file/CV-WE.pdf" download="CV Wilberd Espino" target="_blank" class="button button--flex">
+                    <a href="assets/file/CV Wilberd Espino.pdf" download="CV Wilberd Espino" target="_blank" class="button button--flex">
                         Descargar CV <em class="uil uil-import button__icon"></em>
                     </a>
                 </div>
@@ -162,7 +163,7 @@
 
     <!---------------------------------------- SKILLS  ------------------------------------------------------------------>
         <section class="skills section" id="skills" style="padding: 3px;">
-            <h2 class="section__title">Skillset </h2>
+            <h2 class="section__title">Skill Set </h2>
             <h2 class="section__subtitle">Entre las principales tecnologías que domino se encuentran</h2>
             <div class="skills__container container grid">
                 <div class="row" id="skillset_container">
@@ -200,24 +201,7 @@
                         </h2>
                     </div>
 
-                    <!-- SKILL 3 PHP -->
-                    <!-- <div class="skills__container-card">
-                        <div class="card_skill shadow2">
-                            <div class="imgBx">
-                                <img src="assets/img/html5-with-wordmark-color.svg" alt="HTML Logo">
-                            </div>
-                            <div class="contentBx">
-                                <h2 style="font-size: 24px; text-align:center;">
-                                    Intermedio
-                                </h2>
-                            </div>
-                        </div>
-                        <h2 style="font-size: 24px; text-align:center;">
-                            PHP
-                        </h2>
-                    </div> -->
-
-                    <!-- SKILL 4 ANGULAR -->
+                    <!-- SKILL 3 ANGULAR -->
                     <div class="skills__container-card">
                         <div class="card_skill shadow2">
                             <div class="imgBx">
@@ -234,7 +218,7 @@
                         </h2>
                     </div>
 
-                    <!-- SKILL 5 REACT -->
+                    <!-- SKILL 4 REACT -->
                     <div class="skills__container-card">
                         <div class="card_skill shadow2">
                             <div class="imgBx">
@@ -251,7 +235,7 @@
                         </h2>
                     </div>
 
-                    <!-- SKILL 6 SPRING -->
+                    <!-- SKILL 5 SPRING -->
                     <div class="skills__container-card">
                         <div class="card_skill shadow2">
                             <div class="imgBx">
@@ -264,11 +248,11 @@
                             </div>
                         </div>
                         <h2 style="font-size: 24px; text-align:center;">
-                            Spring Framework
+                            Spring
                         </h2>
                     </div>
 
-                    <!-- SKILL 7 PYTHON -->
+                    <!-- SKILL 6 PYTHON -->
                     <div class="skills__container-card">
                         <div class="card_skill shadow2">
                             <div class="imgBx">
@@ -285,7 +269,7 @@
                         </h2>
                     </div>
 
-                    <!-- SKILL 8 VSCODE -->
+                    <!-- SKILL 7 VSCODE -->
                     <div class="skills__container-card">
                         <div class="card_skill shadow2">
                             <div class="imgBx">
@@ -295,7 +279,24 @@
                             </div>
                         </div>
                         <h2 style="font-size: 24px; text-align:center;">
-                            Visual Studio Code
+                            VS Code
+                        </h2>
+                    </div>
+
+                    <!-- SKILL 8 PHP -->
+                    <div class="skills__container-card">
+                        <div class="card_skill shadow2">
+                            <div class="imgBx">
+                                <img src="assets/img/html5-with-wordmark-color.svg" alt="HTML Logo">
+                            </div>
+                            <div class="contentBx">
+                                <h2 style="font-size: 24px; text-align:center;">
+                                    Intermedio
+                                </h2>
+                            </div>
+                        </div>
+                        <h2 style="font-size: 24px; text-align:center;">
+                            HTML5
                         </h2>
                     </div>
 
@@ -312,7 +313,7 @@
                             </div>
                         </div>
                         <h2 style="font-size: 24px; text-align:center;">
-                            SQL Server 2016
+                            SQL Server
                         </h2>
                     </div>
 
@@ -337,11 +338,10 @@
             </div>
         </section>
 
-
     <!---------------------------------------- QUALIFITCATIONS (EDUCACION Y EXPERIENCIA)  ------------------------------------------------------------------>
         <section class="qualification section" id="qualification">
-            <h2 class="section__title"> Qualification </h2>
-            <span class="section__subtitle"> My persoanl Journey </span>
+            <h2 class="section__title"> Formación y Experiencia </h2>
+            <span class="section__subtitle"> Acerca de mi perfil profesional </span>
 
             <div class="qualification__container container">
 
@@ -468,7 +468,7 @@
                                     </div>
                                     <!-- Timeline content Events -->
                                     <div class="col py-2">
-                                        <div class="card education-card transparent_card mirror-face shadow2">
+                                        <div class="card mirror-face shadow2">
                                             <div class="card-body">
                                                 <div class="task">
                                                     <div class="abstract">
@@ -534,18 +534,65 @@
                                     </div>
                                     <!-- CONTENIDO -->
                                     <div class="col py-2">
-                                        <div class="card education-card transparent_card mirror-face shadow2">
+                                        <div class="card mirror-face shadow2">
                                             <div class="card-body">
                                                 <div class="task">
                                                     <div class="abstract">
                                                         <h3 class="qualification__title"> Desarrollador </h3>
-                                                        <p class="qualification__subtitle"> Empresa: T - Integro </p>
+                                                        <p class="qualification__subtitle"> T - Integro </p>
                                                     </div>
                                                     <div class="details">
-                                                        <p class="qualification__subtitle"> 
-                                                            Análisis e implementación del sistema de gestión hospitalaria T - Integro.<br>
-                                                            Integración de APIS con Microservicios.<br>
-                                                            Tecnologías: SpringBoot, Angular, Swagger, PostgreSQL.<br>
+                                                        <p class="qualification__subtitle" style="text-align: center;"> 
+                                                            - Análisis e implementación del sistema de gestión hospitalaria T - Integro.<br>
+                                                            - Integración de APIS con Microservicios.<br>
+                                                            <strong>- Tecnologías: SpringBoot, Angular, Swagger, PostgreSQL.</strong>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- ITEM 2 -->
+                                <div class="row">
+                                    <!-- Timeline design -->
+                                    <div class="col-auto text-center flex-column d-sm-flex">
+                                        <div class="row h-50 qualification__journey">
+                                            <div class="col">
+                                                <span class="qualification__line"></span>
+                                            </div>
+                                            <div class="col">&nbsp;</div>
+                                        </div>
+
+                                        <h5>
+                                            <span class="badge qualification__calendar">
+                                                <i class="uil uil-calendar-alt qualification__calendar-icon"></i>
+                                                SEPT. 2021
+                                            </span>
+                                        </h5>
+
+                                        <div class="row h-50 qualification__journey">
+                                            <div class="col">
+                                                <span class="qualification__line"></span>
+                                            </div>
+                                            <div class="col">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                    <!-- CONTENIDO -->
+                                    <div class="col py-2">
+                                        <div class="card mirror-face shadow2">
+                                            <div class="card-body">
+                                                <div class="task">
+                                                    <div class="abstract">
+                                                        <h3 class="qualification__title"> Practicante Técnico de Integración </h3>
+                                                        <p class="qualification__subtitle"> Seidor Perú </p>
+                                                    </div>
+                                                    <div class="details">
+                                                        <p class="qualification__subtitle" style="text-align: center;"> 
+                                                            - Desarrollar interfaces SAP PI/PO y SAP CPI.<br>
+                                                            - Desarrollar lógica de ABAP referente a integración.<br>
+                                                            - Investigar nuevas tecnologías referentes a integración.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -573,41 +620,240 @@
         </section>
 
     <!---------------------------------------- PORTFOLIO  ------------------------------------------------------------------>
-        <section class="portfolio section" id="portfolio">
+        <section class="portfolio section" id="portfolio" style="padding-top:0px">
+            <h2 class="section__title"> Portafolio </h2>
+            <span class="section__subtitle">Proyectos destacados</span>
+            <div class="blog-slider">
+                <div class="blog-slider__wrapper swiper-wrapper">
 
-        </section>
+                     <!-- ITEM 1 -->
+                     <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                            <img src="" alt="Portafolio ITEM 1">
+                        </div>
+                        <div class="blog-slider__content">
+                            <span class="blog-slider__code">Junio 2020</span>
+                            <div class="blog-slider__title">MascoMaceta</div>
+                            <div class="blog-slider__text">Usando recursos de Azure, me encargué de la parte IoT 
+                                del proyecto, conectar Stream Analytics con IoT Hub y escritura de datos en Cosmos DB así 
+                                como la visualización de los mismos en Power BI.</div>
+                            <a href="https://github.com/" target="_blank" class="button blog-slider__button button--flex">Demo
+                                <i class="uil uil-play-circle button__icon"></i>
+                            </a>
+                            <a href="https://github.com/" target="_blank" class="button blog-slider__button-github button--flex">Código Fuente
+                                <i class="uil uil-github button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
 
+                    <!-- ITEM 2 -->
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                            <img src="/assets/img/moon.png" alt="Portafolio ITEM 1">
+                        </div>
+                        <div class="blog-slider__content">
+                            <span class="blog-slider__code">Junio 2021</span>
+                            <div class="blog-slider__title">Blog Personal</div>
+                            <div class="blog-slider__text">
+                                Desarrollé mi propio blog personal usando tecnologías como: PHP, MySQL y 
+                                JavaScript. El blog cuenta con una sección de administrador para poder agregar
+                                los posts.
+                                </div>
+                            <a href="#portfolio" target="_blank" class="button blog-slider__button button--flex">Demo
+                                <i class="uil uil-play-circle button__icon"></i>
+                            </a>
+                            <a href="https://github.com/" target="_blank" class="button blog-slider__button-github button--flex">Código Fuente
+                                <i class="uil uil-github button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
 
+                    <!-- ITEM 3 -->
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                            <img src="" alt="Portafolio ITEM 1">
+                        </div>
+                        <div class="blog-slider__content">
+                            <span class="blog-slider__code">Julio 2021</span>
+                            <div class="blog-slider__title">GitHub Fetcher </div>
+                            <div class="blog-slider__text">
+                                Desarrollé un sitio web de consultas de perfiles de GitHub haciendo uso del framework 
+                                React y tecnologías como: Redux, NodeJS, Express y MySQL el testeo de las solicitudes 
+                                HTTP lo realicé mediante la herramienta Postman.
+                            </div>
+                            <a href="#portfolio" target="_blank" class="button blog-slider__button button--flex">Demo
+                                <i class="uil uil-play-circle button__icon"></i>
+                            </a>
+                            <a href="https://github.com/" target="_blank" class="button blog-slider__button-github button--flex">Código Fuente
+                                <i class="uil uil-github button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
 
+                    <!-- ITEM 4 -->
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                            <img src="" alt="Portafolio ITEM 1">
+                        </div>
+                        <div class="blog-slider__content">
+                            <span class="blog-slider__code">Agosto 2021</span>
+                            <div class="blog-slider__title">Aplicación de Gestión de Bicicletas</div>
+                            <div class="blog-slider__text">
+                                Desarrollé una aplicación para gestionar la compra de 
+                                bicicletas (registro de compra por parte del usuario y visualización de los registros por 
+                                medio de una interfaz de administrador) usando Spring Boot para el BackEnd y Angular para 
+                                el FrontEnd.<br>
+                            </div>
+                            <a href="#portfolio" target="_blank" class="button blog-slider__button button--flex">Demo
+                                <i class="uil uil-play-circle button__icon"></i>
+                            </a>
+                            <a href="https://github.com/" target="_blank" class="button blog-slider__button-github button--flex">Código Fuente
+                                <i class="uil uil-github button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
 
-    <!---------------------------------------- CONTACT  ------------------------------------------------------------------>
-        <section class="contact section" id="contact">
-            <div class="home__content grid">
-                <div class="home__social">
-                    <a href="" target="_blank" class="home__social-icon" id="myLinkedIn">
-                        <em class="uil uil-linkedin"></em>
-                    </a>
-                    <a href="" target="_blank" class="home__social-icon" id="myGitHub">
-                        <em class="uil uil-github"></em>                         
-                    </a>
-                    <a href="" target="_blank" class="home__social-icon" id="myInstagram">
-                        <em class="uil uil-instagram-alt"></em>
-                    </a>
-                    <a href="" target="_blank" class="home__social-icon" id="myBlog">
-                        <em class="uil uil-document-layout-left"></em>
-                    </a>
+                    <div class="blog-slider__pagination">
+                        
+                    </div>
                 </div>
             </div>
         </section>
 
+    <!---------------------------------------- CONTACT  ------------------------------------------------------------------>
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contáctame</h2>
+            <span class="section__subtitle">¡Mantengámonos en contacto!</span>
+            <div class="row mt-lg-6 justify-content-center contact_mail">
+                <!-- Contact information -->
+                <!-- <div class="col-lg-6 mx-lg-0 mx-2 contact__container container">
+                     ITEM 2
+                    <div class="row">
+                         CONTENIDO
+                        <div class="col py-2">
+                            <div class="card education-card transparent_card mirror-face shadow2">
+                                <div class="card-body" style="padding-top:50px;padding-left: 50px;">
+                                    <div>
+                                        <div class="contact__information" style="">
+                                            <i class="uil uil-phone contact__icon"></i>
+                                            <div>
+                                                <h3 class="contact__title"> N° de Teléfono </h3>
+                                                <span class="contact__subtitle"> + 51 953508892 </span>
+                                            </div>
+                                        </div>   
+                                        <div class="contact__information-email">
+                                            <i class="uil uil-envelope contact__icon"></i>
+                                            <div>
+                                                <h3 class="contact__title">E-mail</h3>
+                                                <span class="contact__subtitle">wilberd_espino@usmp.pe</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- LINKS -->
+                <div class="col-lg-6 mx-lg-0 mx-2 contact__container-social-1 container">
+                    <div class="col py-2" style="padding-left: 60px;">
+                        <div class="card education-card transparent_card mirror-face shadow2">
+                            <div class="card-body" style="display: flex;">
+                                <div class="contact__information">
+                                    <i class="uil uil-phone contact__icon"></i>
+                                    <div>
+                                        <h3 class="contact__title"> N° de Teléfono </h3>
+                                        <span class="contact__subtitle"> + 51 953508892 </span>
+                                    </div>
+                                </div>   
+                                <div class="contact__information-email">
+                                    <i class="uil uil-envelope contact__icon"></i>
+                                    <div>
+                                        <h3 class="contact__title">E-mail</h3>
+                                        <span class="contact__subtitle">wilberd_espino@usmp.pe</span>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LINKS -->
+                <div class="col-lg-6 mx-lg-0 mx-2 contact__container-social container">
+                    <div class="col py-2" style="padding-left: 60px;">
+                        <div class="card education-card transparent_card mirror-face shadow2">
+                            <div class="card-body">
+                                <h2 class="contact__title-red">Redes</h2>
+                                <div class="home__social">
+                                    <a href="https://www.linkedin.com/in/wespinog" target="_blank" class="home__social-icon" id="myLinkedIn">
+                                        <em class="uil uil-linkedin"></em>
+                                    </a>
+                                    <a href="https://github.com/overhaz256" target="_blank" class="home__social-icon1" id="myGitHub">
+                                        <em class="uil uil-github"></em>                         
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
     <!---------------------------------------- FOOTER  ------------------------------------------------------------------>
-    <footer class="footer">
+      <!-- Site footer -->
+        <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6 class="footer__title" style="text-align:center;"><b>Acerca de</b></h6>
+              <p class="text-justify">Portafolio Web desarrollado por Wilberd Cristopher Espino Gamboa, 
+                  estudiante de Ingeniería de Computación y Sistemas. Tecnologías usadas: HTML5, CSS y JavaScript.</p>
+                  <h6 class="footer__title" style="text-align:center;"><strong>Agradezco tu visita</strong></h6>
+            </div>
+            <div class="col-xs-6 col-md-3" style="padding-left: 130px;">
+              <h6><b>Navega</b></h6>
+              <ul class="footer-links">
+                <li><a href="#about">Conóceme</a></li>
+                <li><a href="#skills">Skill Set</a></li>
+                <li><a href="#education">Educación</a></li>
+                <li><a href="#portfolio">Portafolio</a></li>
+                <li><a href="#contact">Contáctame</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <img style="width: 90%; height:90%;padding-left: 60px;"src="/assets/img/LOGO.png" alt="">
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text"><b>Copyright &copy; 2021 WEspinoG Todos los Derechos Reservados.</b></p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" target="_blank" href="https://www.facebook.com/"><i class="uil uil-facebook"></i></a></li>
+                <li><a class="twitter" target="_blank" href="https://www.twitter.com/"><i class="uil uil-twitter"></i></a></li>
+                <li><a class="dribbble" target="_blank" href="https://github.com/overhaz256"><i class="uil uil-github"></i></a></li>
+                <li><a class="linkedin" target="_blank" href="https://www.linkedin.com/in/wespinog"><i class="uil uil-linkedin"></i></a></li>   
+              </ul>
+            </div>
+          </div>
+        </div>
+        </footer>
 
-    </footer>
+    <!---------------------------------------- SCROLL TOP  ------------------------------------------------------------------>
 
-    
+    <a href="#home" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+
     <!-- Core -->
     <script src="js/core/jquery.min.js"></script>
     <script src="js/core/jquery.min.js"></script>
@@ -619,7 +865,13 @@
     <!-- TypeWritter CSS Effect  -->
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <!--SELF SCRIPT-->
     <script src="js/script.js"></script> 
+
+    <!-- LINKEDIN -->
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
   </body>
 </html>
